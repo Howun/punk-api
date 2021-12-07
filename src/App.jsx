@@ -4,11 +4,10 @@ import Main from "./components/Main/Main";
 
 
 const App = () => {
-  return <>
-          <p>This is the whole page, so put title here etc</p>
+  return <div className="home">
           <NavBar />
           <Main />
-        </>;
+        </div>;
 };
 
 export default App;

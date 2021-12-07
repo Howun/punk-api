@@ -5,9 +5,9 @@ import "./CardList.scss";
 
 const CardList = () => {
   return (
-    <>
-      <Card beerArr={beers} className="cardList"/>
-    </>
+    <div className="CardList">
+      <Card beerArr={beers} className="beers-card"/>
+    </div>
   );
 };
 

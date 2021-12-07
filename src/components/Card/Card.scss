@@ -1,3 +1,18 @@
-.beer-info {
+.beer {
+
+  height: 500px;
+  width: 250px;
   border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+
+  &__image {
+    width: 15%;
+  }
+
+  &__text {
+    margin: 0;
+    padding: 0;
+  }
 }
