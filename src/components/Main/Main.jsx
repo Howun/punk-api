@@ -1,10 +1,11 @@
 import React from "react";
 import CardList from "../CardList/CardList";
 
-const Main = () => {
+const Main = (props) => {
+  const {beerArr} = props;
   return (
     <div className="main">
-      <CardList />
+      <CardList beerArr={beerArr}/>
     </div>
   );
 };
