@@ -9,7 +9,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    const URL = `https://api.punkapi.com/v2/beers?${newURL}`;
+    const URL = `https://api.punkapi.com/v2/beers?per_page=80${newURL}`;
     fetch(URL)
       .then((response) => {
         return response.json();
@@ -29,9 +29,10 @@ function App() {
     return beerNameLowerCase.includes(searchTerm);
   });
 
+
   return (
     <div className="home">
-      <NavBar handleInput={handleInput} />
+      <NavBar handleInput={handleInput} searchTerm={searchTerm} />
       <Main beerArr={filteredBeers} />
     </div>
   );

@@ -1,11 +1,13 @@
 import React from "react";
+import Searchbox from "../SearchBox/Searchbox";
 import "./NavBar.scss"
 
-const NavBar = () => {
+const NavBar = (props) => {
+  const { searchTerm, handleInput } = props;
   return (
     <div className="navBar">
 
-      <input type="text" />
+      <Searchbox searchTerm={searchTerm} handleInput={handleInput}/>
 
       <label className="params high-abv">
         High ABV ({">"}6.0%)
