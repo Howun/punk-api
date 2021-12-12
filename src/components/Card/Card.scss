@@ -1,11 +1,15 @@
 .beer {
-
-  // height: 500px;
   width: 250px;
   border: 1px solid black;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 10px;
+  background-color: rgb(99, 99, 99);
+  padding: 10px;
+  text-align: center;
+  
 
   &__image {
     width: 15%;

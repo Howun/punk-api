@@ -5,7 +5,7 @@ import Main from "./components/Main/Main";
 
 function App() {
   const [beerArr, setBeerArr] = useState([]);
-  const [newURL, setNewURL] = useState("");
+  const [newURL] = useState(""); /*not used yet for the checklist toggle*/
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
@@ -30,10 +30,12 @@ function App() {
   });
 
 
+
+
   return (
     <div className="home">
-      <NavBar handleInput={handleInput} searchTerm={searchTerm} />
-      <Main beerArr={filteredBeers} />
+      <NavBar className="navBar" handleInput={handleInput} searchTerm={searchTerm}/>
+      <Main className="main" beerArr={filteredBeers} />
     </div>
   );
 }
