@@ -3,26 +3,40 @@ import Searchbox from "../SearchBox/Searchbox";
 import "./NavBar.scss"
 
 const NavBar = (props) => {
-  const { searchTerm, handleInput } = props;
+  const {
+    searchTerm,
+    handleInput,
+    handleSubmitABV,
+    handleSubmitBrewDate,
+    handleSubmitPH,
+  } = props;
   return (
     <div className="navBar">
 
-      <Searchbox searchTerm={searchTerm} handleInput={handleInput}/>
+      <h1>PUNK API</h1>
 
-      <label className="params high-abv">
-        High ABV ({">"}6.0%)
-        <input type="checkbox" />
-      </label>
+      <Searchbox
+        className="navBar__searchBox"
+        searchTerm={searchTerm}
+        handleInput={handleInput}
+      />
 
-      <label className="params classic-range">
-        High ABV
-        <input type="checkbox" />
-      </label>
+      <div className="params">
+        <div className="params__option">
+          <label>High ABV ({">"}6.0%)</label>
+          <input type="checkbox" onClick={handleSubmitABV} />
+        </div>
 
-      <label className="params acidity">
-        High ABV (ph {"<"} 4)
-        <input type="checkbox" />
-      </label>
+        <div className="params__option">
+          <label>Classic Range</label>
+          <input type="checkbox" onClick={handleSubmitBrewDate} />
+        </div>
+
+        <div className="params__option">
+          <label>Acidity (ph {"<"} 4)</label>
+          <input type="checkbox" onClick={handleSubmitPH} />
+        </div>
+      </div>
     </div>
   );
 };
